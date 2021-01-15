@@ -1,1 +1,1 @@
-require Jouer from "./joueur.js";
+import Joueur from "joueur.js";
