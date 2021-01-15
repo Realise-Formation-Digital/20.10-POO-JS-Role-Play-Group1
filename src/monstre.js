@@ -1,3 +1,5 @@
+
+// Classe pour creer un monstre
 export default class Monstre {
     #nomMonstre="";
     #pointsExperience= 0;

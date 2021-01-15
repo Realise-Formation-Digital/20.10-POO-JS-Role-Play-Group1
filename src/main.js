@@ -8,6 +8,6 @@ const Marco = new Monstre("Marco","resr");
 
 console.log(Marco.getNomMonstre());
 
-let affiche=document.getElementById("Affichage");
+let affiche=document.getElementById("Affichage")
 
-affiche.innerText(Marco.getNomMonstre());
+affiche.innerHTML = Marco.getNomMonstre();
