@@ -2,41 +2,38 @@ export default class Etre {
 
 // Propriété des joueurs **
 
-  #pointsVie = Null;
-  #pointsArm = Null;
-  #pointsExp = Null;
-  #pointsFor = Null;
-  #pointsEnd = Null;
-  #pointsSou = Null;
+#pointsVie = 10;       // ---->   point de départ    <---- //
+#pointsExperience = 0; // ---->   point d'experience <---- //
+#pointsForce = 1;      // ---->   points de force    <---- //
+#pointsEndurance = 1;  // ---->   points d'endurance <---- //
+#Arme = "";           // ---->    Arme       
+#pointsSous = 0;
+
 
 // Constructor de la class joueurs propriétées **
 
-  constructor(pointsVie,pointsArm,poinstExp,pointsFor,pointsEnd,pointsSou) {
+  constructor(pointsVie,pointsArme,pointsExperience,pointsForce,pointsEndurance,pointsSous) {
 
-    this.#pointsVie = pointVie;
-    this.#pointsArm = pointArm;
-    this.#pointsExp = pointExp;
-    this.#pointsFor = pointFor;
-    this.#pointsEnd = pointEnd;
-    this.#pointsSou = pointSou;
+    this.#pointsVie = pointsVie;
+    this.#pointsArme = pointsArme;
+    this.#pointsExperience = pointsExperience;
+    this.#pointsForce = pointsForce;
+    this.#pointsEndurance = pointsEndurance;
+    this.#pointsSous = pointsSous;
   }
   // Méthode de combat **
 
 combattre() {
-    if (Monstre(pointsVie) = 0) {
-      Joueur(pointExp) =+1;
-      Joueur(pointSou) =  Joueur(pointSou) + Monstre(pointSou);
-      Monstre(pointSou) = 0;
-    }
-    return "vous avez vaincu le méchant monstre"; 
+  
+    return "vous avez vaincu "; 
   }
 
 
   gagner() {
 
-    if (pointsExp == 50) {
+    
       return "La partie est gagnée";
-       else return "Vous pouvez continuer votre quête";
+      
     }
 
 }
