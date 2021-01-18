@@ -104,7 +104,7 @@ constructor(nom,pointsVie,arme,pointsExperience,pointsForce,pointsEndurance,poin
 
     
     return "La partie est gagnée";
-      
+    
     }
 
 };
