@@ -1,93 +1,49 @@
-//class pour crée des joueurs **
+// class pour crées des joueurs *
 
-export default class Joueur {
+import Etre from "./etre";
 
-  // Propriété des joueurs **
-  #pointsVie = Null;
-  #pointsArm = Null;
-  #pointsExp = Null;
-  #pointsFor = Null;
-  #pointsEnd = Null;
-  #pointsSou = Null;
+export default class Joueur extends Etre {
 
+// Constructor de la class joueurs *
 
-// Constructor de la class joueurs propriétées **
+  constructor(nom,pointsVie,pointsExperience,pointsForce,pointsEndurance,arme,pointsSous) {
 
-  constructor(pointsVie,pointsArm,poinstExp,pointsFor,pointsEnd,pointsSou) {
-
-    this.#pointsVie = pointVie;
-    this.#pointsArm = pointArm;
-    this.#pointsExp = pointExp;
-    this.#pointsFor = pointFor;
-    this.#pointsEnd = pointEnd;
-    this.#pointsSou = pointSou;
+    super(nom,pointsVie,pointsExperience,pointsForce,pointsEndurance,arme,pointsSous);
   }
+// methode S’il bat un monstre, il récupère les sous et armes du monstre et gagne 1 point d’expérience. S’il perd contre le monstre, il perd un point de vie * 
+  combattre(){
 
-// Méthode de combat **
-
-  combattre() {
-    if (Monstre(pointsVie) = 0) {
-      Joueur(pointExp) =+1;
-      Joueur(pointSou) =  Joueur(pointSou) + Monstre(pointSou);
-      Monstre(pointSou) = 0;
-    }
-    return "vous avez vaincu le méchant monstre"; 
   }
-
-  fuir() {
-    pointExp = pointExp - 1;
-    else if (pointExp = 0 ) {
-      pointExp = 0;
-    }
-     return "vous êtes un froussard"; 
+// S’il perd tous ses points de vie, il meurt et la partie est terminée *
+  mourir(){
+    
   }
-
-  mourir() {
-    if (pointsVie == 0) {
-      return "Game Over";
-    }
+// S’il fuit un monstre, il perd 1 point d’expérience sauf si déjà à 0 *
+  fuir(){
+    
   }
-
-  equiper() {
-    var ArmeEquipe = true;
-    if (ArmeEquipe = true) {
-      pointFor = pointFor + pointsForce;
-    }
+// La force et/ou l’endurance de l’arme, s’ajoute à la force et/ou l’endurance du joueur tant que l’arme est équipée. Une arme équipée ne peut pas être vendue *
+  equiperArme(){
+    
   }
-
-  desequiper() {
-    //une variable est créée pour dire si arme est equipée ou pas
-     var ArmeEquipe = false; 
-    if (ArmeEquipe = false) {
-      pointFor = pointsForce - pointFor;
+// La force et/ou l’endurance de l’arme, s’enlève à la force et/ou l’endurance du joueur une fois l’arme déséquipée. Une arme déséquipée peut être vendue *
+  desequiperArme(){
+    
   }
-
-  acheterArm() { //pointExperience est le nom de la propriété exp du PNJ
-    if (pointExperience <= pointExp) {
-      var ArmeAchetee = true;
-      pointSou = //Mettre la proprieté PNJ sous
-      //pointSou va diminuer     //   il n'on pas de sous les pnj 
-    }
+// Il est possible d’acheter une arme à un PNJ ​ qui a au moins le même nombre de point d’expérience que le joueur​ et échanger le nombre de sous contre le prix de l’arme * 
+  acheterArme(){
+    
   }
-
-  vendreArm() {
-    var ArmeAchetee = false;
-    //pointSou va augmenter 
-  };
-
-  echanger() {
-//cette Action peut se faire n'imoorte quand
-    if (pointsSou => 100) {
-    result = pointEnd ; pointFor ++;
-    } else echanger() = null;
-  };
-
-  gagner() {
-
-    if (pointsExp == 50) {
-      return "La partie est gagnée";
-       else return "Vous pouvez continuer votre quête";
-    }
-  };
-
-}
+// Il est possible de vendre une arme déséquipée à n’importe quel PNJ et recevoir 50% du prix de l’arme *
+  vendreArme(){
+    
+  }
+// Cette action peut se faire n’importe quand *
+  echangerSous(){
+    
+  }
+// une fois 50 points d’expérience atteint fini *
+  gagner(){
+    
+  }
+};
