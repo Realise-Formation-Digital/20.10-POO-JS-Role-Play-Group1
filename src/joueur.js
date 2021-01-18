@@ -36,14 +36,21 @@ export default class Joueur extends Etre {
   }
 // Il est possible de vendre une arme déséquipée à n’importe quel PNJ et recevoir 50% du prix de l’arme *
   vendreArme(){
-    
+    let acheterArme = false;
+    result = pointsSous ++;    
+    return "Arme vendue avec succèe";
   }
-// Cette action peut se faire n’importe quand *
+// Echanger 100 sous contre 1 point de force ou d’endurance Cette action peut se faire n’importe quand *
   echangerSous(){
-    
+    if (pointsSous => 100) {
+      result = pointsEndurance ; pointsForce ++;
+      } else echangerSous() = null;
+      return "Merci de vôtre échange";
   }
 // une fois 50 points d’expérience atteint fini *
   gagner(){
+    if (pointsExperience == 50) {
+      return "Vous avez gagné la partie";
     
   }
-};
+}
