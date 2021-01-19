@@ -12,26 +12,29 @@ export default class Joueur extends Etre {
   }
 // methode S’il bat un monstre, il récupère les sous et armes du monstre et gagne 1 point d’expérience. S’il perd contre le monstre, il perd un point de vie * 
   combattre(monstre){
-    if (Monstre(pointsVie) = 0) {
-      Joueur(pointsExperience) =+1;
-      Joueur(pointSous) =  Joueur(pointSous) + Monstre(pointSous);
-      Monstre(pointSous) = 0;
+    if (monstre.getPointsVie == 0) {
+     ++ this.getPointsExperience;
+      this.getPointsSous =  this.getPointsSous + monstre.getPointsSous;
+      monstre.getPointsSous = 0;
+    } else {
+        this.getPointsVie - 1;
+      let testMort = (this.getPointsVie() == 0) ? this.mourir() : `Il te reste : ${this.getPointsVie}`;
     }
-    return "vous avez vaincu le méchant monstre"; 
 
   }
 // S’il perd tous ses points de vie, il meurt et la partie est terminée *
-  mourir(joueur){
-    if (pointsVie == 0) {
+  mourir(){
+    if (this.getPointsVie == 0) {
       return "Game Over";
     }
   }
 // S’il fuit un monstre, il perd 1 point d’expérience sauf si déjà à 0 *
-  fuir(joueur){
-      if (pointsExperience = 0 ) {
-         pointsExperience = 0 
+  fuir(){
+      if (joueur.getPointsExperience == 0 ) {
+        getPointsExperience = 0;
+        return "vous êtes un zéro, mais vous pourrez devenir un héros"
     } else 
-    pointsExperience = pointsExperience - 1;
+      joueur.getPointsExperience = joueur.getPointsExperience - 1;
      return "vous êtes un froussard"; 
     
   }

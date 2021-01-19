@@ -12,17 +12,20 @@ export default class Etre {
 
 
 
-// Constructor de la class joueurs propriétées **
+
+
+// Constructor de la class Etre propriétées **
 
 constructor(nom,pointsVie,arme,pointsExperience,pointsForce,pointsEndurance,pointsSous) {
 
     this.#nom = nom;
     this.#pointsVie = pointsVie;
-    this.#arme = arme;
-    this.#pointsExperience = pointsExperience;
-    this.#pointsForce = pointsForce;
-    this.#pointsEndurance = pointsEndurance;
-    this.#pointsSous = pointsSous;
+    this.#arme = random1; //Arme : S'il a 1 arme, il aura des points de force/endurance aléatoire entre 1 et le nombre de pointsExperience sinon pas d'arme
+    this.#pointsExperience = random50; //Points d'experience : Cette methode génère un nombre aléatoire entre 1 et 50
+    this.#pointsForce = randomXp; //Points de force  : Cette methode génère un nombre aléatoire entre 1 et le nombre de pointsExperience
+    this.#pointsEndurance = randomXp; //Points d'endurance : Cette methode génère un nombre aléatoire entre 1 et le nombre de pointsExperience;
+    this.#pointsSous = random50; //Sous : Cette methode génère un nombre aléatoire entre 1 et 50
+    
     }
   //----> Getters et Setters des propriétées de la classe Etre * 
   //----> getter de la propriétées nom :pour lire *
@@ -88,10 +91,8 @@ constructor(nom,pointsVie,arme,pointsExperience,pointsForce,pointsEndurance,poin
 
     // Methodes de la class Etre * 
     // Méthode de combat **
-    combattre() {
+    
   
-    return "je suis entrain de combattre"; 
-  }
 
     vendre() {
 
@@ -109,3 +110,7 @@ constructor(nom,pointsVie,arme,pointsExperience,pointsForce,pointsEndurance,poin
 
 };
 
+// Methodes & Fonctions random pour les différentes propriétés
+let random50 = 1 + Maths.round(Maths.random() * 51);
+let randomXp = Maths.round(Maths.random() * pointsExperience);
+let random1 = Maths.random();
