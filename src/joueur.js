@@ -11,7 +11,7 @@ export default class Joueur extends Etre {
     super(nom,pointsVie,pointsExperience,pointsForce,pointsEndurance,arme,pointsSous);
   }
 // methode S’il bat un monstre, il récupère les sous et armes du monstre et gagne 1 point d’expérience. S’il perd contre le monstre, il perd un point de vie * 
-  combattre(){
+  combattre(monstre){
     if (Monstre(pointsVie) = 0) {
       Joueur(pointsExperience) =+1;
       Joueur(pointSous) =  Joueur(pointSous) + Monstre(pointSous);
@@ -21,13 +21,13 @@ export default class Joueur extends Etre {
 
   }
 // S’il perd tous ses points de vie, il meurt et la partie est terminée *
-  mourir(){
+  mourir(joueur){
     if (pointsVie == 0) {
       return "Game Over";
     }
   }
 // S’il fuit un monstre, il perd 1 point d’expérience sauf si déjà à 0 *
-  fuir(){
+  fuir(joueur){
       if (pointsExperience = 0 ) {
          pointsExperience = 0 
     } else 
@@ -36,18 +36,18 @@ export default class Joueur extends Etre {
     
   }
 // La force et/ou l’endurance de l’arme, s’ajoute à la force et/ou l’endurance du joueur tant que l’arme est équipée. Une arme équipée ne peut pas être vendue *
-  equiperArme(){
-    var ArmeEquipe = true;
+  equiperArme(joueur, arme){
+    let ArmeEquipe = true;
     if (ArmeEquipe = true) {
      Joueur(pointsForce) = Joueur(pointsForce) + Arme(pointsForce);
     }
     
   }
 // La force et/ou l’endurance de l’arme, s’enlève à la force et/ou l’endurance du joueur une fois l’arme déséquipée. Une arme déséquipée peut être vendue *
-  desequiperArme(){
-    var ArmeEquipe = false;
+  desequiperArme(joueur, arme){
+    let ArmeEquipe = false;
     if (ArmeEquipe = false) {
-      pointFor = pointFor + pointsForce;
+      Joueur(pointsForce) = Joueur(pointsForce) - Arme(pointsForce);
     }
   }
 // Il est possible d’acheter une arme à un PNJ ​ qui a au moins le même nombre de point d’expérience que le joueur​ et échanger le nombre de sous contre le prix de l’arme * 
