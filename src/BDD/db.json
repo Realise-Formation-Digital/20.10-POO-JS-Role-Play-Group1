@@ -1,0 +1,232 @@
+{
+    "joueurs": [
+      {
+        "id": 0,
+        "joueurId": 1000,
+        "nom": "Gaby",
+        "pointsVie":10,
+        "pointsExperience": 0,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointForce": 1,
+            "pointsEndurance": 1
+          }
+        ],
+        "sous":20  
+      },
+      {
+        "id": 1,
+        "joueurId": 1001,
+        "nom": "Daniel",
+        "pointsVie":10,
+        "pointsExperience": 0,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointForce": 1,
+            "pointsEndurance": 1
+          }
+        ],
+        "sous":20  
+      },
+      {
+        "id": 2,
+        "joueurId": 1002,
+        "nom": "Fabian",
+        "pointsVie":10,
+        "pointsExperience": 0,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ],
+        "sous":20  
+      },
+      {
+        "id": 3,
+        "joueurId": 1003,
+        "nom": "Tristan",
+        "pointsVie":10,
+        "pointsExperience": 0,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ],
+        "sous":20  
+      },
+      {
+        "id": 4,
+        "joueurId": 1004,
+        "nom": "Rubén",
+        "pointsVie":10,
+        "pointsExperience": 0,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ],
+        "sous":20  
+      }
+    ],
+    "pnjs": [
+      {
+        "id": 0,
+        "pnjId": 2000,
+        "nom":"Denner",
+        "pointsExperience": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "pnjId": 2001,
+        "nom":"Migros",
+        "pointsExperience": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pnjId": 2002,
+        "nom":"Coop",
+        "pointsExperience": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pnjId": 2003,
+        "nom":"Lidl",
+        "pointsExperience": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointsForce": 1,
+            "pointsEndurance": 1
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pnjId": 2004,
+        "nom":"Aldi",
+        "pointsExperience": 1,
+        "arme": [
+          {
+            "armeId": 4000,
+            "nom": "épée de feu",
+            "pointForce": 1,
+            "pointsEndurance": 1
+          }
+        ]
+      }
+    ],
+    "monstres": [
+      {
+        "id": 0,
+        "nom": "Marco",
+        "pointsExperience": 1,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme":0,
+        "sous":0  
+      },
+      {
+        "id": 1,
+        "nom": "Fred",
+        "pointsExperience": 1,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme":0,
+        "sous":0  
+      },
+      {
+        "id": 2,
+        "nom": "Jul",
+        "pointsExperience": 1,
+        "pointsForce": 1,
+        "pointsEndurance": 1,
+        "arme":0,
+        "sous":0  
+      }
+    ],
+    "armes": [
+      {
+        "id": 0,
+        "armeId": 4000,
+        "nom": "épée de feu",
+        "pointsExperience": 1,
+        "pointsForce": 1
+      },
+      {
+        "id": 1,
+        "armeId": 4001,
+        "nom": "épée d'or",
+        "pointsExperience": 1,
+        "pointsForce": 1
+      },
+      {
+        "id": 2,
+        "armeId": 4002,
+        "nom": "épée d'argent",
+        "pointsExperience": 1,
+        "pointsForce": 1
+      },
+      {
+        "id": 3,
+        "armeId": 4003,
+        "nom": "épée de bronce",
+        "pointsExperience": 1,
+        "pointsForce": 1
+      },
+      {
+        "id": 4,
+        "armeId": 4004,
+        "nom": "épée de glace",
+        "pointsExperience": 1,
+        "pointsForce": 1
+      }
+    ]
+  }

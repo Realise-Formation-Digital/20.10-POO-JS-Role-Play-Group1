@@ -1,86 +1,170 @@
+/**
+ * @class Represent la classe père des classes: Joueur, Pnj, Monstre et Arme.
+ */
 export default class Etre {
-  // Propriété des Êtres**
+  //#region Propriétés de la class Etre
+  #id;
+  #nom;
+  #pointsExperience;
+  #pointsForce;
+  #pointsEndurance;
+  #arme;
+  #pointsSous;
+  //#endregion
 
-  #nom = "Etre"; // ---->   nom
-  #pointsExperience; // ---->   point d'experience
-  #pointsForce; // ---->   points de force
-  #pointsEndurance; // ---->   points d'endurance
-  #quantiteArme; // ---->    nombre des armes possedées
-  #pointsSous; // ---->    Sous possédé
-
-  // Constructor de la class Etre
-  constructor(nom) {
-    // Initialisation des propriétées de la class Etre
-    this.#nom = nom; // ---->   nom de l'etre
-    this.#pointsExperience = 0; // ---->   point d'experience
-    this.#pointsForce = 1; // ---->   points de force
-    this.#pointsEndurance = 1; // ---->   points d'endurance
-    this.#quantiteArme = 1; // ---->   quantité des armes. Depart avec 1
-    this.#pointsSous = 20; // ---->   Sous possédé l'Etre
+  /**
+   * * Constructeur de la class Etre.
+   * @constructor(string)
+   * @param {String} nom Paramètre optional nom du type string.
+   */
+  constructor(nom = String) {
+    //#region Initialisation des propriétées de la class Etre
+    this.#nom = nom;
+    this.#id = 0;
+    this.#pointsExperience = 0;
+    this.#pointsForce = 1;
+    this.#pointsEndurance = 1;
+    this.#arme = Object;
+    this.#pointsSous = 20;
+    //#endregion
   }
-  //----> Getters et Setters des propriétées de la classe Etre *
-  //----> getter pour lire la propriétée nom
-  get getNom() {
+
+  //#region Méthodes GETTERS et SETTERS des propriétés de la class Etre
+
+  /**
+   * * Méthode GET qui permet de récupérer la valeur de la propriété privée #id
+   * @method GET(accesseur)
+   * @return {Number} Valeur de #id: number
+   */
+  getId() {
+    return this.#id;
+  }
+  /**
+   * * Méthode SET qui permet d'affecter une nouvelle valeur dans la propriété privée #id
+   * @method SET(mutateur)
+   * @param {Number} id
+   */
+  setId(id) {
+    this.#id = id;
+  }
+
+  /**
+   * * Méthode GET qui permet de récupérer la valeur de la propriété privée #nom
+   * @method GET(accesseur)
+   * @return {String} Valeur de #nom: String
+   */
+  getNom() {
     return this.#nom;
   }
-  //----> setter pour écrire la propriétée nom
-  set setNom(nom) {
-    this.getNom = nom;
+  /**
+   * * Méthode SET qui permet d'affecter une nouvelle valeur dans la propriété privée #nom
+   * @method SET(mutateur)
+   * @param {String} nom
+   */
+  setNom(nom) {
+    this.#nom = nom;
   }
 
-  //----> getter de la propriétées arme :pour lire *
-  get getQuantiteArme() {
-    return this.#quantiteArme;
+  /**
+   * * Méthode GET qui permet de récupérer les données de l'objet de la propriété privée #arme
+   * @method GET(asseseur)
+   * @return {Object} Données de #arme: Objet
+   */
+  getArme() {
+    return this.#arme;
+  }
+  /**
+   * * Méthode SET qui permet d'affecter un nouveau objet dans la propriété privée #arme
+   * @method SET(mutateur)
+   * @param {Object} arme
+   */
+  setArme(arme) {
+    this.#arme = arme;
   }
 
-  //----> getter de la propriétées experience :pour lire *
-  get getPointsExperience() {
+  /**
+   * * Méthode GET qui permet de récupérer la valeur de la propriété privée #pointsExperience
+   * @method GET(accesseur)
+   * @return {Number} Valeur de #pointsExperience: number
+   */
+  getPointsExperience() {
     return this.#pointsExperience;
   }
-  //----> setter de la propriétées experience :pour écrire *
-  set setPointsExperience(pointsExperience) {
+  /**
+   * * Méthode SET qui permet d'affecter une nouvelle valeur dans la propriété privée #pointsExperience
+   * @method SET(mutateur)
+   * @param {Number} pointsExperience
+   */
+  setPointsExperience(pointsExperience) {
     this.#pointsExperience = pointsExperience;
   }
 
-  //----> getter de la propriétées Force :pour lire *
-  get getPointsForce() {
+  /**
+   * * Méthode GET qui permet de récupérer la valeur de la propriété privée #pointsForce
+   * @method GET(accesseur)
+   * @return {string} Valeur de #pointsForce: string
+   */
+  getPointsForce() {
     return this.#pointsForce;
   }
-  //----> setter de la propriétées Force :pour écrire *
-  set setPointsForce(pointsForce) {
+  /**
+   * * Méthode SET qui permet d'affecter une nouvelle valeur dans la propriété privée #pointsForce
+   * @method SET(mutateur)
+   * @param {string} pointsForce
+   */
+  setPointsForce(pointsForce) {
     this.#pointsForce = pointsForce;
   }
 
-  //----> getter de la propriétées Endurance :pour lire *
-  get getPointsEndurance() {
+  /**
+   * * Méthode GET qui permet de récupérer la valeur de la propriété privée #pointsEndurance
+   * @method GET(accesseur)
+   * @return {Number} Valeur de #pointsEndurance: number
+   */
+  getPointsEndurance() {
     return this.#pointsEndurance;
   }
-  //----> setter de la propriétées Endurance :pour écrire *
-  set setPointsEndurance(pointsEndurance) {
+  /**
+   * * Méthode SET qui permet d'affecter une nouvelle valeur dans la propriété privée #pointsEndurance
+   * @method SET(mutateur)
+   * @param {Number}pointsEndurance
+   */
+  setPointsEndurance(pointsEndurance) {
     this.#pointsEndurance = pointsEndurance;
   }
-  //----> getter de la propriétées sous :pour lire *
-  get getPointsSous() {
+
+  /**
+   * * Méthode GET qui permet de récupérer la valeur de la propriété privée #pointsSous
+   * @method GET(accesseur)
+   * @return {Number} Valeur de #pointsSous: number
+   */
+  getPointsSous() {
     return this.#pointsSous;
   }
-  //----> setter de la propriétées sous :pour écrire *
-  set setPointsSous(pointsSous) {
+  /**
+   * * Méthode SET qui permet d'affecter une nouvelle valeur dans la propriété privée #pointsSous
+   * @method SET(mutateur)
+   * @param {Number} pointsSous
+   */
+  setPointsSous(pointsSous) {
     this.#pointsSous = pointsSous;
   }
+  //#endregion
 
-  // Methodes de la class Etre *
-  // Méthode de combat **
+  //#region Méthodes de la class Etre
+
+  // Méthode combattre qui return ei gagner ou perdre l'Etre
   combattre() {
     return "je suis entrain de combattre";
   }
 
-  vendre() {
-    return "Arme vendue avec succèe";
+  vendre(arme) {
+    return arme;
   }
-
-  static aleatoire(valueDepart) {
-    let random = Math.floor(Math.random() * 50);
-    let resultat = valueDepart + random;
+  // Méthode aleatoire qui return un valeur aleatoire entre les deux valuers d'entre
+  aleatoire(valeurMin, valeurMax) {
+    let resultat = valeurMin + Math.floor(Math.random() * valeurMax);
     return resultat;
   }
+  //#endregion
 }
